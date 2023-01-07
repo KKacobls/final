@@ -1,0 +1,150 @@
+<html>
+    <body style="background-color: rgb(255, 255, 255);">
+        <link rel="stylesheet" href="material.css">
+        <a href="index.html">
+            <img src="icon\0p.png" alt="My Image" style="float: left; display: inline-block;">
+        </a>
+        <p class="title">四川麻將<button onclick="history.back()">Go back</button></p>
+        <pre class="text3">
+沒有王牌，也就是沒有寶牌的概念，也沒有嶺上牌其實是有的，下述。
+採用的役種與日麻完全不同雖然有一些偶然一樣的（下述）。
+沒有規定必須門清的役種，也沒有鳴牌就會降番的役種。
+和牌時不計算符數，而是直接按照1000*2^（番數-1）的計算方式轉換為點數（最高為32000點）。
+自摸和牌時，所有其他玩家分別付給和牌的玩家對應的點數再額外加1000點。
+配牌時選擇3張同花色的牌，與隨機另一名玩家交換。如果某花色的牌少於3張，則不能交換這些牌。川麻的「換三張」規則
+換牌後，選一個不需要的花色（萬、餅、索），如果手中仍然有此花色則不能和牌（絕一門）川麻的「定缺」規則。
+一局進行到流局或最多3人和牌時結束。
+當牌山剩餘0張牌時，若和牌人數小於3，則本局流局。
+一局中最開始和牌的玩家會成為下一局的莊家。
+沒有特殊流局。
+和牌時當場計分。和牌的玩家將自己的手牌扣下，不能再摸牌或打牌。
+和牌時，若某人被擊飛，則當場結束。
+開槓時，按照平常摸牌的順序摸一張牌，而那張牌算作嶺上牌。
+暗槓時，所有玩家當場向開槓的玩家各支付2000點川麻的「下雨」。
+大明槓時，被鳴的玩家當場向開槓的玩家支付2000點川麻的「颳風」。
+用剛剛摸到的牌加槓時，所有玩家當場向開槓的玩家各支付1000點。
+用手中現有的牌加槓時，無需支付點數。
+若加槓時發生搶槓，則優先處理搶槓，而不會產生由加槓造成的點數變動。而如果那位被搶槓的玩家之後和牌時，則那個槓子會被視為刻子。
+流局時，如果有開槓的玩家未能聽牌，則需將開槓時獲得的點數歸還給原主川麻的「退稅」規則。
+不聽罰符處理如下：
+聽牌的玩家需算出自己若和牌會贏得多少點數。如果聽多種牌，則需算出和哪種牌贏得的點數最多（即「高目」）。沒聽牌的玩家需支付高目所帶來的分數給聽牌的玩家。川麻的「查大叫」規則
+例：流局，玩家A聽兩種牌，其中和一種會帶來16000點，而和另一種會帶來32000點。玩家B沒聽牌，需要支付32000點給玩家A。
+無論玩家是否聽牌，如果手中仍有最開始宣布不需要的花色，則需一人向所有其他玩家各支付最少8000點。如果其他玩家中有已聽牌，並可能以16000點或以上和牌的玩家，則需向他支付和牌時會帶來的點數。川麻的「查花豬」規則
+例：流局，玩家A聽16000點的牌，B聽4000點的牌，C沒聽牌，而D聽牌了卻沒有絕一門，則C需支付16000點給A，再支付4000點給B，而D需支付16000點給A、8000點給B、8000點給C。
+<p class="text3">以下是四川麻將翻數表</p>
+<table border="1"  width="600xp">
+    <tr>
+        <td class="text3"  width="100xp">役種</td>
+        <td class="text3"  width="500xp">說明</td>
+    </tr>
+    <tr>
+        <td class="text3" >底和</td>
+        <td class="text3" >無役的情況下和牌，即「雞和」。除了其他的一番役以外不能與其他役種複合。</td>
+    </tr>
+    <tr>
+        <td class="text3" >槓上花</td>
+        <td class="text3" >與一般的嶺上開花一樣。</td>
+    </tr>
+    <tr>
+        <td class="text3" >槓上砲</td>
+        <td class="text3" >用另一人開槓後打出的牌榮和。</td>
+    </tr>
+    <tr>
+        <td class="text3" >搶槓</td>
+        <td class="text3" >與一般的搶槓一樣。</td>
+    </tr>
+    <tr>
+        <td class="text3" >海底撈月</td>
+        <td class="text3" >其實是把一般的海底撈月與河底撈魚合併成一個役種，自摸海底牌或榮和最後一次打牌都算。</td>
+    </tr>
+    <tr>
+        <td class="text3" >根</td>
+        <td class="text3" >只要手中有四張一樣的牌就加一番，這四張是否開了槓都可以。每多一組四張一樣的牌就加一番，與寶牌的加番效果是一樣的。</td>
+    </tr>
+    <tr>
+        <td class="text3" >對對和</td>
+        <td class="text3" >與一般的對對和一樣。唯一的二番役。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清一色</td>
+        <td class="text3" >與一般的清一色一樣，但因為沒有字牌的干擾，所以沒有混一色，同時少了一種花色的干擾，這樣清一色就容易多了，而降為三番。</td>
+    </tr>
+    <tr>
+        <td class="text3" >七對子</td>
+        <td class="text3" >與一般的七對子一樣，但升為三番。此外，兩副一樣的對子也是允許的，此時成為「龍七對」，為四番役。</td>
+    </tr>
+    <tr>
+        <td class="text3" >帶么九</td>
+        <td class="text3" >與一般的對對和一樣。唯一的二番役。</td>
+    </tr>
+    <tr>
+        <td class="text3" >金鉤釣</td>
+        <td class="text3" >鳴牌四次之後單吊。相當於古役的十二落抬。可以與對對和、將對複合。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清對</td>
+        <td class="text3" >清一色的對對和。注意：這是四番役，而不是對對和（二番）加清一色（三番）的五番。</td>
+    </tr>
+    <tr>
+        <td class="text3" >將對</td>
+        <td class="text3" >只使用2、5、8的對對和。已知bug：會與對對和複合。</td>
+    </tr>
+    <tr>
+        <td class="text3" >龍七對</td>
+        <td class="text3" >七對子中有兩副一樣的對子。有四張一樣的牌，但不計根1。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清七對</td>
+        <td class="text3" >清一色的七對子。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清么九</td>
+        <td class="text3" >清一色的帶么九。注意：不是清老頭。已知bug：會與帶么九複合。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清金鉤釣</td>
+        <td class="text3" >清一色的金鉤釣。不計清對。</td>
+    </tr>
+    <tr>
+        <td class="text3" >天和</td>
+        <td class="text3" >與一般的天和一樣，但因為開局前要交換牌，加上少了字牌的干擾，所以天和的機率大幅上升。</td>
+    </tr>
+    <tr>
+        <td class="text3" >地和</td>
+        <td class="text3" >子家第一次摸牌就和牌，但與一般的地和不同，不會被第一巡鳴牌破壞。地和的機率也相比大幅上升。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清龍七對</td>
+        <td class="text3" >清一色的龍七對。</td>
+    </tr>
+    <tr>
+        <td class="text3" >十八羅漢</td>
+        <td class="text3" >相當於一般的四槓子。</td>
+    </tr>
+    <tr>
+        <td class="text3" >清十八羅漢</td>
+        <td class="text3" >清一色的十八羅漢。</td>
+    </tr>
+      
+      
+    </table>
+
+        </pre>
+        <p class="text3">四川麻將點數計算機</p>
+        <p class="text3">打上翻數即可算出點數</p>
+        翻數: <input id="num2" type="text" oninput="calculateSum() " style="background-color: rgb(255, 255, 255);"> = 
+        <span id="result" style="background-color: rgb(255, 255, 255);"></span>
+    </body>
+    <script>
+        // 計算兩個數字的和
+        function calculateSum() {
+          var num2 = parseInt(document.getElementById('num2').value);
+          
+          var result = 1000*2**(num2-1)
+          if(result>=32000){
+            result = 32000;
+          }
+          document.getElementById('result').innerHTML = result;
+        }
+      </script>
+</html>
